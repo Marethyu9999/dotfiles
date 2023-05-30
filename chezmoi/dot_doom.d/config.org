@@ -1,0 +1,25 @@
+#+title: Config
+* Configuration
+** User stuff
+#+begin_src lisp
+(setq user-full-name "Erik Grobecker"
+      user-mail-address "erik@grobecker.me")
+#+end_src
+** Doom theming
+#+begin_src lisp
+(setq doom-theme 'doom-one)
+#+end_src
+*** Display
+#+begin_src lisp
+(setq display-line-numbers-type t)
+#+end_src
+** Org directory
+#+begin_src lisp
+(setq org-directory "~/org/")
+#+end_src
+** Tramp
+for using ssh/ftp in emacs
+#+begin_src lisp
+(with-eval-after-load 'tramp
+  (setq tramp-default-method "ssh"))
+#+end_src
