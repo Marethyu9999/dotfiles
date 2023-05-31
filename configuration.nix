@@ -91,6 +91,7 @@ in {
           ];
         };
     };
+  environment.pathsToLink = [ "/libexec" ];
 
   # Configure keymap in X11
   services.xserver = {
