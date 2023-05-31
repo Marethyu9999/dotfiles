@@ -76,6 +76,21 @@ in {
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver = {
+      desktopManager = {
+          xterm.enable = false;
+        };
+
+      windowManager.i3 = {
+          enable = true;
+          extraPackages = with pkgs; [
+          dmenu
+          i3status
+          i3lock
+          #i3blocks
+          ];
+        };
+    };
 
   # Configure keymap in X11
   services.xserver = {
