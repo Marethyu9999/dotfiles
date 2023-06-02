@@ -88,6 +88,13 @@ in {
           i3status
           i3lock
           #i3blocks
+          rofi
+          rofimoji
+          rofi-calc
+          rofi-bluetooth
+          rofi-power-menu
+          pinentry-rofi
+          keepmenu
           ];
         };
     };
