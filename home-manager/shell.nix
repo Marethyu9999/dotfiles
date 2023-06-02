@@ -11,6 +11,7 @@
     thefuck  # autocorrection of previous command using "fuck" as init
     alacritty  # better terminal
     btop  # top but better and faster
+    bat  # better cat command
   ];
   programs.fish = {
     enable = true;
