@@ -63,6 +63,8 @@
     
     git-crypt
     ranger
+    nodejs_20
+    unzip
   ];
 
   imports = [
