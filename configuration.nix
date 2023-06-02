@@ -29,8 +29,10 @@ in {
   };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".gpgCard = true;
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".gpgCard.publicKey = "/home/marethyu/git/sys-config/publickey.asc";
+  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081" = {
+      gpgCard.publicKey = "/home/marethyu/git/sys-config/publickey.asc";
+      gpgcard = true;
+    };
   boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".device = "/dev/disk/by-uuid/8d73b112-3c31-48a2-8697-335a26d94081";
   boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".keyFile = "/crypto_keyfile.bin";
 
