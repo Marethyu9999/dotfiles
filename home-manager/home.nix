@@ -65,6 +65,7 @@
     ranger
     nodejs_20
     unzip
+    yubikey-personalization
   ];
 
   imports = [
