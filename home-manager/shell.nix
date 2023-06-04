@@ -40,4 +40,7 @@
       normal.family = "InconsoloataGo Nerd Font";
     };
   };
+  home.sessionVariables = {
+      EDITOR = "nvim";
+    };
 }
