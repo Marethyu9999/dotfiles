@@ -29,8 +29,8 @@ in {
   # };
   boot.initrd.luks.gpgSupport = true;
   boot.initrd.luks.devices."luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436".gpgCard = {
-      encryptedPass = builtins.readFile "/home/marethyu/git/sys-config/luks-password.txt.asc";
-      publicKey = builtins.readFile "/home/marethyu/git/sys-config/publickey.asc";
+      encryptedPass = builtins.readFile "/luks-password.txt.asc";
+      publicKey = builtins.readFile "/publickey.asc";
     };
 
   # Enable swap on luks
