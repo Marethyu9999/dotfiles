@@ -66,6 +66,7 @@
     nodejs_20
     unzip
     yubikey-personalization
+    lf
   ];
 
   imports = [
@@ -88,6 +89,21 @@
     enableScDaemon = true;
     enableFishIntegration = true;
   };
+
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+        l = "exa -l";
+        hup = "home-manager switch";
+        aup = "topgrade";
+        nup = "sudo nixos-rebuild switch";
+        doom = "~/.emacs.d/bin/doom";
+        edit = "emacs";
+        chezmoi-git = "nvim ~/.local/share/chezmoi";
+        lvim = "/home/marethyu/.local/bin/lvim";
+    };
+  };
+
 
   programs.home-manager.enable = true;
 }

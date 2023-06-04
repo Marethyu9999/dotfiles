@@ -14,20 +14,7 @@
     bat  # better cat command
     lf  # to use for file management
   ];
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-        l = "exa -l";
-        hup = "home-manager switch";
-        aup = "topgrade";
-        nup = "sudo nixos-rebuild switch";
-        doom = "~/.emacs.d/bin/doom";
-        edit = "emacs";
-        chezmoi-git = "nvim ~/.local/share/chezmoi";
-        lvim = "/home/marethyu/.local/bin/lvim";
-    };
-  };
-  programs.neovim.defaultEditor = true;
+    programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
     env = {
       TERM = "alacritty";
