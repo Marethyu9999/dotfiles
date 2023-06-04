@@ -8,8 +8,8 @@ let
   tarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz;
-  encryptedPassContents = builtins.readFile "/home/marethyu/git/sys-config/luks-password.txt.asc";
-  encryptedPassGPG = builtins.toFile "luks-password.txt.asc" encryptedPassContents;
+  encryptedPassContents = builtins.readFile "/home/marethyu/git/sys-config/luks-password.txt.gpg";
+  encryptedPassGPG = builtins.toFile "luks-password.txt.gpg" encryptedPassContents;
   encryptedPublickey = builtins.readFile "/home/marethyu/git/sys-config/publickey.asc";
   encryptionKey = builtins.toFile "publickey.asc" encryptedPublickey;
 in {
