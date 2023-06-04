@@ -12,7 +12,7 @@
     alacritty  # better terminal
     btop  # top but better and faster
     bat  # better cat command
-    lf
+    lf  # to use for file management
   ];
   programs.fish = {
     enable = true;
