@@ -1,123 +1,121 @@
-<h1 align="center">NvChad</h1>
+<div align="center">
+
+# Nyoom.nvim
+
+</div>
 
 <div align="center">
-	<a href="https://nvchad.com/">Home</a>
-  <span> • </span>
-    	<a href="https://nvchad.com/docs/quickstart/install">Install</a>
-  <span> • </span>
-       	<a href="https://nvchad.com/docs/contribute">Contribute</a>
-  <span> • </span>
-	<a href="https://github.com/NvChad/NvChad#gift_heart-support">Support</a>
-  <span> • </span>
-        <a href="https://nvchad.com/docs/features">Features</a>
-  <p></p>
-</div> 
 
-<div align="center">
- 
-[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.8.3-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
-[![GitHub Issues](https://img.shields.io/github/issues/NvChad/NvChad.svg?style=flat-square&label=Issues&color=d77982)](https://github.com/NvChad/NvChad/issues)
-[![Discord](https://img.shields.io/discord/869557815780470834?color=738adb&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/gADmkJb9Fb)
-[![Matrix](https://img.shields.io/badge/Matrix-40aa8b.svg?style=flat-square&logo=Matrix&logoColor=white)](https://matrix.to/#/#nvchad:matrix.org)
-[![Telegram](https://img.shields.io/badge/Telegram-blue.svg?style=flat-square&logo=Telegram&logoColor=white)](https://t.me/DE_WM)
+[![Fennel](https://img.shields.io/badge/Made%20with%20Fennel-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](https://fennel-lang.org)
+[![Stars](https://img.shields.io/github/stars/nyoom-engineering/nyoom.nvim?color=%23b66467&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/nyoom-engineering/nyoom.nvim?color=%238c977d&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/issues)
+[![Forks](https://img.shields.io/github/forks/nyoom-engineering/nyoom.nvim?color=%23d9bc8c&logoColor=%23151515&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/network/members)
+[![License](https://img.shields.io/github/license/nyoom-engineering/nyoom.nvim?color=%238da3b9&style=for-the-badge)](https://mit-license.org/)
+![Discord Server](https://img.shields.io/discord/1050624267592663050?color=738adb&label=Discord&Color=white&style=for-the-badge)
 
-  </div>
+</div>
 
-## Showcase
+> These are your father's parentheses.  
+> Elegant weapons for a more... civilized age.  
+— [xkcd/297](https://xkcd.com/297/)
 
-<img src="https://nvchad.com/features/nvdash.webp">
-<img src="https://nvchad.com/banner.webp">
+![merged](https://user-images.githubusercontent.com/71196912/206819620-af569a8f-87ad-4b27-b08c-01bb547fa570.png)
 
-<img src="https://nvchad.com/screenshots/onedark.webp">
-<img src="https://nvchad.com/screenshots/rxyhn1.webp">
+Nyoom.nvim was an answer to abstracted and complex codebases that take away end-user extensibility, try to be a one-size-fits-all config, and needlessly lazy load *everything*. It solves this problem by providing a set of well integrated modules similar to doom-emacs. Modules contain curated plugins and configurations that work together to provide a unified look and feel across all of Nyoom. The end goal of nyoom.nvim is to be used as a framework config for users to extend and add upon, leading to a more unique editing experience.
 
-## What is it?
+Nyoom can be anything you'd like. Enable all the modules for the vscode-alternative in you, remove some and turn it into the prose editor of your dreams, or disable everything and have a nice set of macros to start your configuration from scratch!
 
-- NvChad is a neovim config written in lua aiming to provide a base configuration with very beautiful UI and blazing fast startuptime (around 0.02 secs ~ 0.07 secs). We tweak UI plugins such as telescope, nvim-tree, bufferline etc well to provide an aesthetic UI experience. 
+At its core, Nyoom consists of a set of intuitive macros, a nice standard library, a set of modules, and some opinionated default options, and nothing more.
 
-- Lazy loading is done 93% of the time meaning that plugins will not be loaded by default, they will be loaded only when required also at specific commands, events etc. This lowers the startuptime and it was like 0.07~ secs tested on an old pentium machine 1.4ghz + 4gb ram & HDD.
+Designed against the mantras of doom-emacs [doom-emacs](https://github.com/hlissner/doom-emacs):
 
-- NvChad isnt a framework! Its supposed to be used as a "base" config, so users could tweak the defaults well, can also remove the things they dont like in the default config and build their config on top of it. Users can tweak the entire default config while staying in their custom config (lua/custom dir). This is the control center of the user's config and gitignored so the users can stay update to-date with NvChad's latest config (main branch) while still controlling it with their chadrc (file that controls entire custom dir)
++ **Gotta go fast**. Startup and run-time performance are priorities.
++ **Close to metal**. There's less between you and vanilla neovim by design. That's less to grok and less to work around when you tinker.
++ **Opinionated, but not stubborn**. Nyoom (and Doom) are about reasonable defaults and curated opinions, but use as little or as much of it as you like.
++ **Your system, your rules**. You know better. At least, Nyoom hopes so! There are no external dependencies (apart from rust), and never will be.
++ **Nix/Guix is a great idea!** The Neovim ecosystem is temperamental. Things
+break and they break often. Disaster recovery should be a priority! Nyoom's
+package management should be declarative and your private config reproducible,
+and comes with a means to roll back releases and updates (still a WIP).
 
-## Theme Showcase
+It also aligns with many of Doom's features:
 
-<details><summary> <b>Images (Click to expand!)</b></summary>
++ Minimalistic good looks inspired by modern editors.
++ A modular organizational structure for separating concerns in your config.
++ A standard library designed to simplify your fennel bike shedding.
++ A declarative package management and module system (inspired by `use-package`, powered by [Packer.nvim](https://github.com/wbthomason/packer.nvim)). Install packages from anywhere, and pin them to any commit.
++ A Space(vim)-esque keybinding scheme, centered around leader and localleader prefix keys (SPC and SPCm).
++ Project search (and replace) utilities, powered by ripgrep, and telescope.
++ Per-file indentation style detection and [editorconfig] integration. Let
+someone else argue about tabs vs *spaces*
++ Support for modern tooling and navigation through language-servers, null-ls, and tree-sitter.
 
-![4 themes](https://nvchad.com/screenshots/four_Themes.webp)
-![radium 1](https://nvchad.com/screenshots/radium1.webp)
-![radium 2](https://nvchad.com/screenshots/radium2.webp)
-![radium 3](https://nvchad.com/screenshots/radium3.webp)
+For more info, checkout our (under construction) [FAQ](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/faq.md)
 
+## Prerequisites
 
-(Note: these are just 4-5 themes, NvChad has around 56 themes)
-</details>
++ Neovim v0.8.1+
++ Git
++ Ripgrep 11.0+
 
-## UI related plugins used
+Nyoom works best with a modern terminal with [Truecolor](https://github.com/termstandard/colors) support. Optionally, you can install [Neovide](https://github.com/neovide/neovide) if you'd like a gui.
 
-<details><summary> <b>Images (Click to expand!)</b></summary>
+Nyoom is comprised of optional [modules](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/modules.md), some of which may have additional dependencies. Run `:checkhealth` to check for what you may have missed.
 
-<h3> Nvim-tree.lua </h3>
+## Install
 
-Fast file tree:
+```bash
+git clone --depth 1 https://github.com/nyoom-engineering/nyoom.nvim.git ~/.config/nvim 
+cd ~/.config/nvim/
+bin/nyoom install 
+bin/nyoom sync
+```
 
-<kbd><img src="https://nvchad.com/features/nvimtree.webp"></kbd>
+Then read [getting started](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/getting_started.md) to be walked through
+installing, configuring and maintaining Nyoom Nvim.
 
-<h3> Telescope-nvim </h3>
+It's a good idea to add `~/.config/nvim/bin` to your `PATH`! Other `bin/nyoom`
+commands you should know about:
 
-A fuzzy file finder, picker, sorter, previewer and much more:
++ `nyoom sync` to synchronize your private config with Nyoom by installing missing
+packages, removing orphaned packages, and regenerating caches. Run this
+whenever you modify your `packages.fnl` and `modules.fnl`
++ `nyoom upgrade` to update Nyoom to the latest release
++ `nyoom lock` to dump a snapshot of your currently installed packages to a lockfile file.
 
-<kbd><img src="https://nvchad.com/features/telescope.webp"></kbd>
+## Getting help
 
-<h3> Our own statusline written from scratch  </h3>
+Neovim is no journey of a mere thousand miles. You *will* run into problems and
+mysterious errors. When you do, here are some places you can look for help:
 
-[NvChad UI](https://github.com/NvChad/ui)
++ [Our Documentation](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/) covers many use cases.
++ The builtin `:help` is your best friend
++ To search available keybinds: `<SPC>fk`
++ Run `:check health` to detect common issues with your development
+environment.
++ Search [Nyoom's issue tracker](https://github.com/nyoom-engineering/nyoom.nvim/issues) in case your issue was already
+reported.
++ Hop on [our Discord server](https://discord.gg/M528tDKXRG) ; it's active and friendly!
 
-<kbd><img src="https://nvchad.com/features/statuslines.webp"></kbd>
+If you have an issue with a plugin in Nyoom.nvim, first you should report it here. Please don't bother package maintainers with issues that are caused by my configs, and vice versa.
 
-<h3> Tabufline (our own pertab bufferline) </h3>
+## Roadmap
 
-<kbd><img src="https://nvchad.com/features/tabufline.webp"></kbd>
-- Here's a [video](https://www.youtube.com/watch?v=V_9iJ96U_k8&ab_channel=siduck) that showcases it.
+(under construction)
 
-<h3> NvCheatsheet ( our UI Plugin ) </h3>
-<kbd> <img src="https://nvchad.com/features/nvcheatsheet.webp"/></kbd>
+## Contribute
 
-</details>
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-## Plugins list
+Checkout the [Contributor Guide](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/contributing.md)
 
-- Many beautiful themes, theme toggler by our [base46 plugin](https://github.com/NvChad/base46)
-- Inbuilt terminal toggling & management with [Nvterm](https://github.com/NvChad/nvterm)
-- NvChad updater, hide & unhide terminal buffers with [NvChad extensions](https://github.com/NvChad/extensions)
-- Lightweight & performant ui plugin with [NvChad UI](https://github.com/NvChad/ui) It provides statusline modules, tabufline ( tabs + buffer manager) , beautiful cheatsheets and much more!
-- File navigation with [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
-- Beautiful and configurable icons with [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
-- Git diffs and more with [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) 
-- NeoVim Lsp configuration with [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) and [mason.nvim](https://github.com/williamboman/mason.nvim)
-- Autocompletion with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- File searching, previewing image and text files and more with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim).
-- Syntax highlighting with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- Autoclosing braces and html tags with [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-- Indentlines with [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Useful snippets with [friendly snippets](https://github.com/rafamadriz/friendly-snippets) + [LuaSnip](https://github.com/L3MON4D3/LuaSnip).
-- Popup mappings keysheet [whichkey.nvim](https://github.com/folke/which-key.nvim)
-
-## History
-
-- I (@siduck i.e creator of NvChad) in my initial days of learning to program wanted a lightweight IDE for writing code, I had a very low end system which was like 1.4ghz pentium + 4gb ram & HDD. I was into web dev stuff so many suggested me to use vscode but that thing was very heavy on my system, It took more ram than my browser! ( minimal ungoogled chromium ) so I never tried it again, sublime text was nice but the fear of using proprietary software XD for a linux user bugged me a lot. Then I tried doom-emacs which looked pretty but it was slow and I was lost within its docs, I tried lunarvim but too lazy to read the docs. Doom-emacs and lunarvim inspired me to make a config which is the prettiest + very fast and simple.
-
-- I'm decent at ricing i.e customizing system and making it look pretty so I posted my neovim rice on [neovim subreddit](https://www.reddit.com/r/neovim/comments/m3xl4f/neovim_rice/), my neovim-dotfiles github repo blew up and then I had to come up with a name, I was amazed by the chad meme lol so I put NvChad as the name, the chad word in here doesnt literally mean the chad guy but in the sense such as chad linux vs windows i.e meaning superior, best etc. NvChad was made for my personal use but it gained some popularity which inspired me to make a public config i.e config usable by many and less hassle to update as everyone's going to use the same base config (NvChad) with their custom modifications (which are gitignored so that wont mess up), without the custom config stuff users would have to keep a track of every commit and copy paste git diffs to manually update nvchad.
- 
-## :gift_heart: Support
-
-If you like NvChad and would like to support & appreciate it via donation then I'll gladly accept it. 
-
-[![kofi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/siduck)
-[![paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/siduck76)
-[![buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/siduck)
-[![patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/siduck)
++ I love pull requests and bug reports!
++ Don't hesitate to [tell me my lisp-fu
+sucks](https://github.com/nyoom-engineering/nyoom.nvim/issues/new), but please tell me
+why.
++ Don't see support for your language, or think it should be improved? Feel free to open an issue or PR with your changes.
 
 ## Credits
 
-- [Elianiva](https://github.com/elianiva) helped me with NeoVim Lua related issues many times, NvChad wouldn't exist without his help at all as he helped me in my initial neovim journey!
-- @lorvethe for making the beautiful NvChad logo.
++ [David Guevara](https://github.com/datwaft) For getting me into fennel, and for some of his beautiful macros. Without him Nyoom wouldn't exist!
++ [Oliver Caldwell](https://github.com/Olical/) For his excellent work on Aniseed, Conjure, and making fennel feel like a first class language in neovim
