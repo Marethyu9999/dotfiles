@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 let
-  arball =
+  tarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz;
 in {

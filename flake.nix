@@ -23,14 +23,14 @@
         nixoslaptop-marethyu = lib.nixosSystem {
           inherit system;
           modules = [ 
-          ./configuration.nix
-          home-manager.nixosModules.home-manager {
+            ./configuration.nix
+            home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.marethyu = {
                   imports = [ ./home-manager/home.nix ];
                 };
-            }
+              }
             ];
           };
         };

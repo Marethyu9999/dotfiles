@@ -30,6 +30,6 @@
     };
   };
   home.sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "lvim";
     };
 }
