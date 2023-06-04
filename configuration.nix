@@ -27,6 +27,7 @@ in {
   # boot.initrd.secrets = {
     # "/crypto_keyfile.bin" = null;
   # };
+  boot.initrd.luks.gpgSupport = true;
   boot.initrd.luks.devices."luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436".gpgCard = {
       encryptedPass = "/crypto_keyfile.bin.gpg";
       publicKey = "/publickey.asc";
