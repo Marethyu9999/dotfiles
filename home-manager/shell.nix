@@ -12,6 +12,7 @@
     alacritty  # better terminal
     btop  # top but better and faster
     bat  # better cat command
+    lf
   ];
   programs.fish = {
     enable = true;
@@ -23,7 +24,6 @@
         doom = "~/.emacs.d/bin/doom";
         edit = "emacs";
         chezmoi-git = "nvim ~/.local/share/chezmoi";
-        lf
     };
   };
   programs.neovim.defaultEditor = true;
