@@ -38,7 +38,7 @@ in {
     };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".device.gpgCard = {
+  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".gpgCard = {
     encryptedPass = encryptedPassGPG;
     publicKey = encryptionKey;
   };
