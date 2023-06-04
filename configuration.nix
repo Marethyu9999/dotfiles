@@ -8,8 +8,10 @@ let
   tarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz;
-  encryptedPassContents = builtins.readFile "/luks-password.txt.asc";
+  encryptedPassContents = builtins.readFile "/home/marethyu/git/sys-config/luks-password.txt.asc";
   encryptedPassGPG = builtins.toFile "luks-password.txt.asc" encryptedPassContents;
+  encryptedPublickey = builtins.readFile "/home/marethyu/git/sys-config/publickey.asc";
+  encryptionKey = builtins.toFile "publickey.asc" encryptedPublickey;
 in {
   imports =
     [ # Include the results of the hardware scan.
@@ -32,7 +34,7 @@ in {
   boot.initrd.luks.gpgSupport = true;
   boot.initrd.luks.devices."luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436".gpgCard = {
       encryptedPass = encryptedPassGPG;
-      publicKey = builtins.readFile "/publickey.asc";
+      publicKey = encryptionKey;
     };
 
   # Enable swap on luks
