@@ -24,6 +24,7 @@
         doom = "~/.emacs.d/bin/doom";
         edit = "emacs";
         chezmoi-git = "nvim ~/.local/share/chezmoi";
+        lvim = "/home/marethyu/.local/bin/lvim";
     };
   };
   programs.neovim.defaultEditor = true;
