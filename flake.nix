@@ -28,10 +28,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.marethyu = {
-                  imports = [
-                            ./home-manager/home.nix
-                            ./home-manager/shell.nix
-                            ];
+                  imports = [ ./home-manager/home.nix ];
                 };
             }
             ];
