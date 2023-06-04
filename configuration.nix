@@ -24,15 +24,15 @@ in {
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
+  # boot.initrd.secrets = {
+    # "/crypto_keyfile.bin" = null;
+  # };
+  boot-initrd.luks.devices-"luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436".gpgCard = {
+      encryptedPass = "/crypto_keyfile.bin.gpg";
+      publicKey = "/publickey.asc";
+    };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".gpgCard = {
-      publicKey = "/home/marethyu/git/sys-config/publickey.asc";
-      gracePeriod = 20;
-    };
   boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".device = "/dev/disk/by-uuid/8d73b112-3c31-48a2-8697-335a26d94081";
   boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".keyFile = "/crypto_keyfile.bin";
 
