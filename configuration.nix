@@ -38,9 +38,12 @@ in {
     };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".gpgCard = {
-    encryptedPass = encryptedPassGPG;
-    publicKey = encryptionKey;
+  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081" = {
+    device = "/dev/nvme0n1p3";
+    gpgCard = {
+      encryptedPass = encryptedPassGPG;
+      publicKey = encryptionKey;
+    };
   };
 
   networking.hostName = "nixoslaptop-marethyu"; # Define your hostname.
