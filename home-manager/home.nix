@@ -96,7 +96,7 @@
         l = "exa -l";
         hup = "home-manager switch";
         aup = "topgrade";
-        nup = "sudo nixos-rebuild switch";
+        nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
         doom = "~/.emacs.d/bin/doom";
         edit = "emacs";
         chezmoi-git = "nvim ~/.local/share/chezmoi";
