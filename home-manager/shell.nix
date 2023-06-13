@@ -13,8 +13,9 @@
     btop  # top but better and faster
     bat  # better cat command
     lf  # to use for file management
+    direnv  # to manage my shell enviroment
   ];
-    programs.neovim.defaultEditor = true;
+  programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
     env = {
       TERM = "alacritty";
@@ -30,6 +31,6 @@
     };
   };
   home.sessionVariables = {
-      EDITOR = "lvim";
+      EDITOR = "~/.local/bin/lvim";
     };
 }
