@@ -14,6 +14,8 @@
     bat  # better cat command
     lf  # to use for file management
     direnv  # to manage my shell enviroment
+    taskwarrior # cli-based task manager
+    bat-extras.batman
   ];
   programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
