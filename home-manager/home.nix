@@ -71,6 +71,7 @@
   imports = [
     ./shell.nix
     ./fonts.nix
+    ./mdbook.nix
   ];
 
   programs.micro.enable = true;
