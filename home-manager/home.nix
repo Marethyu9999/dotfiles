@@ -9,8 +9,8 @@
 
   home.packages = with pkgs; [
 
-    brave
-    firefox
+    brave  # main brothwser
+    firefox  # backup browser
 
     thunderbird-bin
 
@@ -19,9 +19,7 @@
     gitoxide
 
     yt-dlp
-    tartube-yt-dlp
 
-    obsidian
     onlyoffice-bin
 
     keepassxc
@@ -56,18 +54,18 @@
     #gnumake
     python39
     python39Packages.pip
-    # nodejs-19_x
-    rustup
+    rustup  # complete rust toolkit
     lazygit
     neovim
     nerdfonts
     
-    git-crypt
-    ranger
+    git-crypt  # for transparent encryption
+    ranger  # command line file manager
     nodejs_20
     unzip
     yubikey-personalization
     lf
+    topgrade
   ];
 
   imports = [
@@ -95,11 +93,9 @@
     enable = true;
     shellAliases = {
         l = "exa -l";
-        hup = "home-manager switch";
         aup = "topgrade";
         nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
         doom = "~/.emacs.d/bin/doom";
-        edit = "emacs";
         chezmoi-git = "nvim ~/.local/share/chezmoi";
         lvim = "/home/marethyu/.local/bin/lvim";
     };
