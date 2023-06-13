@@ -15,7 +15,8 @@
     lf  # to use for file management
     direnv  # to manage my shell enviroment
     taskwarrior # cli-based task manager
-    bat-extras.batman
+    vit  # to have a tui for taskwarrior
+    bat-extras.batman  # to use bat for reading man pages
   ];
   programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
