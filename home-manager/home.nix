@@ -37,17 +37,18 @@
     vlc
     calibre
 
+    # SSH stuff
     termius
     sshs
 
     libsForQt5.ark
 
-    tealdeer
+    tealdeer  # for reading easy help
 
-    gzdoom
-    starsector
+    gzdoom  # old doom games
+    starsector  # funny space game
 
-    rnix-lsp
+    rnix-lsp  # lsp-server written in rust
     gcc_multi
     cmake
     libtool
@@ -57,7 +58,6 @@
     python39Packages.pip
     # nodejs-19_x
     rustup
-    rust-analyzer
     lazygit
     neovim
     nerdfonts
