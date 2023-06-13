@@ -56,7 +56,6 @@
     python39
     python39Packages.pip
     # nodejs-19_x
-    cargo
     rustup
     rust-analyzer
     lazygit
