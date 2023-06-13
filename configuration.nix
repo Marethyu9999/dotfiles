@@ -5,13 +5,9 @@
 { config, pkgs, ... }:
 
 let
-  tarball =
+  arball =
     fetchTarball
       https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz;
-  encryptedPassContents = builtins.readFile "/home/marethyu/git/sys-config/luks-password.txt.gpg";
-  encryptedPassGPG = builtins.toFile "luks-password.txt.gpg" encryptedPassContents;
-  encryptedPublickey = builtins.readFile "/home/marethyu/git/sys-config/publickey.asc";
-  encryptionKey = builtins.toFile "publickey.asc" encryptedPublickey;
 in {
   imports =
     [ # Include the results of the hardware scan.
@@ -28,23 +24,13 @@ in {
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # Setup keyfile
-  # boot.initrd.secrets = {
-    # "/crypto_keyfile.bin" = null;
-  # };
-  boot.initrd.luks.gpgSupport = true;
-  boot.initrd.luks.devices."luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436".gpgCard = {
-      encryptedPass = encryptedPassGPG;
-      publicKey = encryptionKey;
-    };
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
+  };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081" = {
-    device = "/dev/nvme0n1p3";
-    gpgCard = {
-      encryptedPass = encryptedPassGPG;
-      publicKey = encryptionKey;
-    };
-  };
+  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".device = "/dev/disk/by-uuid/8d73b112-3c31-48a2-8697-335a26d94081";
+  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".keyFile = "/crypto_keyfile.bin";
 
   networking.hostName = "nixoslaptop-marethyu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
