@@ -27,18 +27,6 @@ in {
     "/crypto_keyfile.bin" = null;
   };
 
-  # Setup Luks with yubikey
-  boot.initrd.luks.yubikeySupport = true;
-  boot.initrd.luks.devices = {
-    "luks-9867a9d4-5c3b-44e9-bd61-2e0124e11436" = {
-      device = "/dev/disk/by-uuid/9867a9d4-5c3b-44e9-bd61-2e0124e11436";
-      yubikey = {
-        slot = 2;
-        twoFactor = true;
-      };
-    };
-  };
-
   # Enable swap on luks
   boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".device = "/dev/disk/by-uuid/5d9c9c85-071c-45f5-8da6-8141b1620366";
   boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".keyFile = "/crypto_keyfile.bin";
