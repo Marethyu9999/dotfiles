@@ -2,8 +2,8 @@
 
 {
 
-  home.username = "marethyu";
-  home.homeDirectory = "/home/marethyu";
+  home.username = "erik";
+  home.homeDirectory = "/home/erik";
 
   home.stateVersion = "22.11";
 
@@ -51,7 +51,7 @@
     cmake
     libtool
 
-    #gnumake
+    gnumake
     python39
     python39Packages.pip
     rustup  # complete rust toolkit
@@ -98,7 +98,7 @@
         nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
         doom = "~/.emacs.d/bin/doom";
         chezmoi-git = "nvim ~/.local/share/chezmoi";
-        lvim = "/home/marethyu/.local/bin/lvim";
+        lvim = "/home/erik/.local/bin/lvim";
     };
   };
 
