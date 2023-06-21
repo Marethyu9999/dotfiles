@@ -131,6 +131,9 @@ in {
     ];
   };
 
+  # Enable Hyprland
+  programs.hyprland.enable= true;
+
   # Start Podman
   virtualisation.podman = {
   	enable = true;
