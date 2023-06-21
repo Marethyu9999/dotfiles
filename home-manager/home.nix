@@ -73,6 +73,7 @@
     ./shell.nix
     ./fonts.nix
     ./mdbook.nix
+    ./hyprland.nix
   ];
 
   programs.micro.enable = true;
