@@ -17,6 +17,7 @@
     chezmoi
     seafile-client
     gitoxide
+    gitkraken
 
     yt-dlp
 
