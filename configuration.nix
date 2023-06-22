@@ -19,9 +19,9 @@ in {
     ];
 
   # Bootloader.
+  boot.initrd.systemd.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -29,16 +29,15 @@ in {
   };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".device = "/dev/disk/by-uuid/8d73b112-3c31-48a2-8697-335a26d94081";
-  boot.initrd.luks.devices."luks-8d73b112-3c31-48a2-8697-335a26d94081".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".device = "/dev/disk/by-uuid/5d9c9c85-071c-45f5-8da6-8141b1620366";
+  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "nixoslaptop-marethyu"; # Define your hostname.
+  networking.hostName = "nixoslaptop-erik"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -112,9 +111,9 @@ in {
   programs.fish.enable = true;
   programs.neovim.defaultEditor = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.marethyu = {
+  users.users.erik = {
     isNormalUser = true;
-    description = "marethyu";
+    description = "erik";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
     packages = with pkgs; [
@@ -184,12 +183,12 @@ in {
   };
 
   # Enabling my yubikey for PAM using u2f
-  security.pam.yubico = {
-  	enable = true;
-  	debug = true;
-  	mode = "challenge-response";
-  	control = "required";
-  };
+  #security.pam.yubico = {
+  #enable = true;
+  #	debug = true;
+  #	mode = "challenge-response";
+  #	control = "required";
+  #};
 
   programs.kdeconnect.enable = true;
 

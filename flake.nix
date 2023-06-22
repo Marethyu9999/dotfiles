@@ -20,14 +20,14 @@
       lib = nixpkgs.lib;
     in {
       nixosConfigurations = {
-        nixoslaptop-marethyu = lib.nixosSystem {
+        nixoslaptop-erik = lib.nixosSystem {
           inherit system;
           modules = [ 
             ./configuration.nix
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.marethyu = {
+              home-manager.users.erik = {
                   imports = [ ./home-manager/home.nix ];
                 };
               }
