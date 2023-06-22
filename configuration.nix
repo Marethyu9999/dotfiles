@@ -45,7 +45,7 @@ in {
   nix.extraOptions = ''experimental-features = nix-command flakes'';
 
   # pcscd daemon
-  services.pcscd.enable = true;
+  # services.pcscd.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
