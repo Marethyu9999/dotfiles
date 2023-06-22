@@ -30,7 +30,7 @@
     };
     window.decorations = "full";
     font = {
-      normal.family = "InconsoloataGo Nerd Font";
+      normal.family = "FiraCode Nerd Font";
     };
   };
   home.sessionVariables = {
