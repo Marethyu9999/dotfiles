@@ -19,6 +19,8 @@ in {
     ];
 
   # Bootloader.
+  boot.initrd.luks.fido2Support = true;
+  boot.initrd.luks.devices."luks-73913852-6654-49ef-8b51-305af9c936cd".fido2.credential = "0eef6bb1b4c0e4fb45aa51cfbb9e7cb8d3347a8b0c401a09bc11a0785264d794483826e6a7be7f5acbef2ef1e21c56ea";
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
