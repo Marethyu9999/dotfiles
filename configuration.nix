@@ -109,7 +109,6 @@ in {
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
   programs.fish.enable = true;
-  programs.neovim.defaultEditor = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.erik = {
     isNormalUser = true;
@@ -121,21 +120,11 @@ in {
       kate
       vscode
       ansible
-      podman-desktop
-      podman
-      podman-tui
       openttd
       cloudflared
       trilium-desktop
       emacs
-      localsend
     ];
-  };
-
-  # Start Podman
-  virtualisation.podman = {
-  	enable = true;
-  	  	
   };
   
   # Allow unfree packages
