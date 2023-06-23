@@ -22,6 +22,8 @@
     yt-dlp
 
     onlyoffice-bin
+    trilium-desktop
+    vscode
 
     keepassxc
     gnupg

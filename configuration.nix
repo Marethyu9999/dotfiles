@@ -118,11 +118,9 @@ in {
     packages = with pkgs; [
       firefox
       kate
-      vscode
       ansible
       openttd
       cloudflared
-      trilium-desktop
       emacs
     ];
   };
