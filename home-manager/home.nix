@@ -18,6 +18,7 @@
     seafile-client
     gitoxide
     gitkraken
+    nixfmt
 
     yt-dlp
 
