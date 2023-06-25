@@ -9,8 +9,8 @@
 
   home.packages = with pkgs; [
 
-    brave  # main brothwser
-    firefox  # backup browser
+    brave # main brothwser
+    firefox # backup browser
 
     thunderbird-bin
 
@@ -45,12 +45,12 @@
 
     libsForQt5.ark
 
-    tealdeer  # for reading easy help
+    tealdeer # for reading easy help
 
-    gzdoom  # old doom games
-    starsector  # funny space game
+    gzdoom # old doom games
+    starsector # funny space game
 
-    rnix-lsp  # lsp-server written in rust
+    rnix-lsp # lsp-server written in rust
     gcc_multi
     cmake
     libtool
@@ -58,13 +58,13 @@
     gnumake
     python39
     python39Packages.pip
-    rustup  # complete rust toolkit
+    rustup # complete rust toolkit
     lazygit
     neovim
     nerdfonts
-    
-    git-crypt  # for transparent encryption
-    ranger  # command line file manager
+
+    git-crypt # for transparent encryption
+    ranger # command line file manager
     nodejs_20
     unzip
     yubikey-personalization
@@ -72,11 +72,7 @@
     topgrade
   ];
 
-  imports = [
-    ./shell.nix
-    ./fonts.nix
-    ./mdbook.nix
-  ];
+  imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
 
   programs.micro.enable = true;
 
@@ -97,15 +93,14 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-        l = "exa -l";
-        aup = "topgrade";
-        nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
-        doom = "~/.emacs.d/bin/doom";
-        chezmoi-git = "nvim ~/.local/share/chezmoi";
-        lvim = "/home/erik/.local/bin/lvim";
+      l = "exa -l";
+      aup = "topgrade";
+      nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
+      doom = "~/.emacs.d/bin/doom";
+      chezmoi-git = "nvim ~/.local/share/chezmoi";
+      lvim = "/home/erik/.local/bin/lvim";
     };
   };
-
 
   programs.home-manager.enable = true;
 }

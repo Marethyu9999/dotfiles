@@ -1,7 +1,5 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
-    home.packages = with pkgs; [
-        hasklig
-    ];
+  home.packages = with pkgs; [ hasklig ];
 }

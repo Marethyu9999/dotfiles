@@ -5,18 +5,16 @@
 { config, pkgs, ... }:
 
 let
-  arball =
-    fetchTarball
-      https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz;
+  arball = fetchTarball
+    "https://github.com/NixOS/nixpkgs-channels/archive/nixos-tar.gz";
 in {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # include home-manager
-      #<home-manager/nixos>
-      # Include Doom Emacs
-      #./emacs.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # include home-manager
+    #<home-manager/nixos>
+    # Include Doom Emacs
+    #./emacs.nix
+  ];
 
   # Bootloader.
   boot.initrd.systemd.enable = true;
@@ -24,13 +22,13 @@ in {
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
+  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".device = "/dev/disk/by-uuid/5d9c9c85-071c-45f5-8da6-8141b1620366";
-  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".device =
+    "/dev/disk/by-uuid/5d9c9c85-071c-45f5-8da6-8141b1620366";
+  boot.initrd.luks.devices."luks-5d9c9c85-071c-45f5-8da6-8141b1620366".keyFile =
+    "/crypto_keyfile.bin";
 
   networking.hostName = "nixoslaptop-erik"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -42,7 +40,7 @@ in {
   networking.networkmanager.enable = true;
 
   # Experimental settings
-  nix.extraOptions = ''experimental-features = nix-command flakes'';
+  nix.extraOptions = "experimental-features = nix-command flakes";
 
   # pcscd daemon
   # services.pcscd.enable = true;
@@ -66,9 +64,7 @@ in {
     LC_TIME = "de_DE.UTF-8";
   };
 
-  fonts.fonts = [
-    pkgs.font-awesome
-  ];
+  fonts.fonts = [ pkgs.font-awesome ];
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -115,39 +111,32 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      firefox
-      kate
-      ansible
-      openttd
-      cloudflared
-      emacs
-    ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs ];
   };
-  
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Languagetool
   services.languagetool = {
-  	enable = true;
-  	allowOrigin = "*";
-  	public = true;
+    enable = true;
+    allowOrigin = "*";
+    public = true;
   };
 
   nix = {
-      settings.auto-optimise-store = true;
-      gc = {
-          automatic = true;
-          dates = "weekly";
-          options = "--delete-older-than 7d";
-        };
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
     };
-  
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     languagetool
     yubico-pam
     opensc
@@ -155,7 +144,7 @@ in {
     #pcsclite
     #texlive.combined.scheme-medium
     #(python38.withPackages(ps: with ps; [jupyter]))
-  #  wget
+    #  wget
   ];
 
   hardware.gpgSmartcards.enable = true;
