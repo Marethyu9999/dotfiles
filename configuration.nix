@@ -140,6 +140,7 @@ in {
     languagetool
     yubico-pam
     opensc
+    nixd
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
