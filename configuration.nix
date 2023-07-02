@@ -140,7 +140,12 @@ in {
     languagetool
     yubico-pam
     opensc
-    nixd
+    # nixd
+    libmicrodns
+    protobuf
+    avahi
+    libvdpau
+    libva
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
@@ -168,6 +173,7 @@ in {
   #};
 
   programs.kdeconnect.enable = true;
+  services.avahi.enable = true;
 
   # List services that you want to enable:
 
