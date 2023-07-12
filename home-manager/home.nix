@@ -96,7 +96,7 @@
       l = "exa -l";
       aup = "topgrade";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
-      doom = "~/.emacs.d/bin/doom";
+      doom = "~/.config/emacs/bin/doom";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
       lvim = "/home/erik/.local/bin/lvim";
     };
