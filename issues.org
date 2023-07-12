@@ -1,0 +1,7 @@
+#+title: Issues
+* Common Issues I had
+** Didn't know how to update my system using this config
+1. run =nix flake update= to get the new flake.lock
+   + this is important as this updates the version of nixpkgs (the package repo) which you use when rebuilding
+2. run =sudo nixos-rebuild switch --upgrade --flake .# --impure=
+   + this is just the normal rebuild command
