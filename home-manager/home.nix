@@ -9,7 +9,7 @@
 
   home.packages = with pkgs; [
 
-    brave # main brothwser
+    brave # main browser
     firefox # backup browser
 
     thunderbird-bin
