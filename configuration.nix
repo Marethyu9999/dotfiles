@@ -146,6 +146,7 @@ in {
     avahi
     libvdpau
     libva
+    nil
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
