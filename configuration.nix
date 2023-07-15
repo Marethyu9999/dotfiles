@@ -147,6 +147,7 @@ in {
     libvdpau
     libva
     nil
+    comma
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
