@@ -17,6 +17,7 @@
     chezmoi
     seafile-client
     owncloud-client  # for use with my nextcloud server (obviosly)
+    syncthing
     syncthingtray  # for syncing nextcloud to my phone (as the phone app doesnt work with KeepassDX)
     gitoxide
     gitkraken
