@@ -13,6 +13,8 @@
     firefox # backup browser
 
     thunderbird-bin
+    libsForQt5.korganizer
+    libsForQt5.kmail
 
     chezmoi
     seafile-client
