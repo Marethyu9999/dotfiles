@@ -64,7 +64,7 @@ in {
     LC_TIME = "de_DE.UTF-8";
   };
 
-  fonts.fonts = [ pkgs.font-awesome ];
+  fonts.packages = [ pkgs.font-awesome ];
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -111,8 +111,10 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus ];
   };
+
+  programs.weylus.openFirewall = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
