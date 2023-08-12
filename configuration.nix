@@ -109,12 +109,12 @@ in {
   users.users.erik = {
     isNormalUser = true;
     description = "erik";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "uinput"];
     shell = pkgs.fish;
     packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus ];
   };
 
-  programs.weylus.openFirewall = true;
+  programs.weylus.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -188,7 +188,7 @@ in {
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
