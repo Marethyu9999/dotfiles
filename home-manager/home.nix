@@ -30,6 +30,7 @@
     onlyoffice-bin
     trilium-desktop
     vscode
+    xournalpp
 
     keepassxc
     gnupg
