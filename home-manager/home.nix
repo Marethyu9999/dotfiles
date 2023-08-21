@@ -34,6 +34,7 @@
     tetex
     lyx
     texmaker
+    texlab
     pandoc  # to change the format of almost anything
 
     keepassxc
