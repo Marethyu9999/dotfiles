@@ -34,6 +34,7 @@
     tetex
     lyx
     texmaker
+    pandoc  # to change the format of almost anything
 
     keepassxc
     gnupg
