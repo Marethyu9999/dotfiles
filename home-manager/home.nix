@@ -31,6 +31,9 @@
     trilium-desktop
     vscode
     xournalpp
+    tetex
+    lyx
+    texmaker
 
     keepassxc
     gnupg
