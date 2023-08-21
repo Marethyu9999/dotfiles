@@ -6,7 +6,6 @@
     fish # the shell I use
     exa # ls but in rust and better
     ripgrep # grep but in rust
-    ripgrep-all # ripgrep but also for stuff in files
     fd # alternative to find using rust
     thefuck # autocorrection of previous command using "fuck" as init
     alacritty # better terminal
