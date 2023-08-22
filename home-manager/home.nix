@@ -82,6 +82,9 @@
     yubikey-personalization
     lf
     topgrade
+    bottles
+    wine
+    playonlinux
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
