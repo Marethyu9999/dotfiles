@@ -32,6 +32,7 @@
     vscode
     xournalpp
     tetex
+    tectonic
     lyx
     texmaker
     texlab
