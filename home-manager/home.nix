@@ -28,6 +28,7 @@
     yt-dlp
 
     onlyoffice-bin
+    libreoffice-fresh
     trilium-desktop
     vscode
     xournalpp
