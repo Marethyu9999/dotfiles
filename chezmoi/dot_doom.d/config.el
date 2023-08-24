@@ -1,6 +1,8 @@
 (setq user-full-name "Erik Grobecker"
       user-mail-address "erik@grobecker.me")
 
+(setq auth-sources '("~/.authinfo.gpg"))
+
 (setq doom-theme 'doom-one)
 
 (setq display-line-numbers-type t)
