@@ -83,9 +83,11 @@
     yubikey-personalization
     lf
     topgrade
+    
     bottles
-    wine
-    playonlinux
+    wine-wayland
+    winetricks
+    samba
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
