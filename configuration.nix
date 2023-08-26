@@ -111,10 +111,15 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" "uinput"];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux podman distrobox ];
   };
 
   programs.weylus.enable = true;
+
+  # podman config
+  virtualisation.podman = {
+  enable = true;
+  };
 
   # tmux config
   programs.tmux = {

@@ -84,9 +84,6 @@
     yubikey-personalization
     lf
     topgrade
-    
-    distrobox
-    podman
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
