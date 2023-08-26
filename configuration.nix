@@ -111,10 +111,16 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" "uinput"];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux ];
   };
 
   programs.weylus.enable = true;
+
+  # tmux config
+  programs.tmux = {
+  enable = true;
+  clock24 = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

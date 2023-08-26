@@ -16,7 +16,6 @@
     taskwarrior # cli-based task manager
     taskwarrior-tui # to have a tui for taskwarrior
     bat-extras.batman # to use bat for reading man pages
-    tmux  # a terminal mutliplexer, usefull for terminas such as alacritty, which dont support tabs on their own
   ];
   programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
@@ -30,11 +29,5 @@
     font = { normal.family = "FiraCode Nerd Font"; };
   };
   
-  programs.tmux = {
-    shell = "fish";
-    enable = true;
-    clock24 = true;
-  };
-
   home.sessionVariables = { EDITOR = "~/.local/bin/lvim"; };
 }
