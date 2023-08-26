@@ -29,5 +29,12 @@
     window.decorations = "full";
     font = { normal.family = "FiraCode Nerd Font"; };
   };
+  
+  programs.tmux = {
+    shell = "fish";
+    enable = true;
+    clock24 = true;
+  };
+
   home.sessionVariables = { EDITOR = "~/.local/bin/lvim"; };
 }
