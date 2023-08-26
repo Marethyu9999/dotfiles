@@ -39,6 +39,7 @@
     texlab
     pandoc  # to change the format of almost anything
 
+    # Security stuff
     keepassxc
     gnupg
     kleopatra
@@ -84,10 +85,8 @@
     lf
     topgrade
     
-    bottles
-    wine-wayland
-    winetricks
-    samba
+    distrobox
+    podman
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
