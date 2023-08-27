@@ -16,6 +16,7 @@
     taskwarrior # cli-based task manager
     taskwarrior-tui # to have a tui for taskwarrior
     bat-extras.batman # to use bat for reading man pages
+    manix  # to search through everything nix related fast
   ];
   programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
