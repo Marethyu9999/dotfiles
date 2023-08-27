@@ -167,6 +167,7 @@ in {
     comma
     freerdp
     busybox
+    spice
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
