@@ -168,6 +168,7 @@ in {
     freerdp
     busybox
     spice
+    spice-gtk
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
@@ -190,6 +191,7 @@ in {
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;  # as virt-manager apparently needs it
   virtualisation.libvirtd.onBoot = "start";
+  virtualisation.spiceUSBRedirection.enable = true;
 
   # Enabling my yubikey for PAM using u2f
   #security.pam.yubico = {
