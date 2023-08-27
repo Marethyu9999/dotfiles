@@ -84,6 +84,8 @@
     yubikey-personalization
     lf
     topgrade
+    virt-manager
+    win-virtio
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
@@ -113,6 +115,13 @@
       doom = "~/.config/emacs/bin/doom";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
       lvim = "/home/erik/.local/bin/lvim";
+    };
+  };
+
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+    autoconnect = ["qemu:///system"];
+    uris = ["qemu:///system"];
     };
   };
 

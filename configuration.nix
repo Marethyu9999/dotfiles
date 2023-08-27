@@ -109,9 +109,13 @@ in {
   users.users.erik = {
     isNormalUser = true;
     description = "erik";
-    extraGroups = [ "networkmanager" "wheel" "uinput"];
+    extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd"];
     shell = pkgs.fish;
     packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux podman distrobox ];
+  };
+
+  environment.variables = {
+    LIBVIRT_DEFAULT_URI = "qemu:///system";
   };
 
   programs.weylus.enable = true;
@@ -161,6 +165,8 @@ in {
     libva
     nil
     comma
+    freerdp
+    busybox
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
@@ -178,6 +184,11 @@ in {
     enable = true;
     enableSSHSupport = true;
   };
+
+  # Enable libvirtd
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;  # as virt-manager apparently needs it
+  virtualisation.libvirtd.onBoot = "start";
 
   # Enabling my yubikey for PAM using u2f
   #security.pam.yubico = {
