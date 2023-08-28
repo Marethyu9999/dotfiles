@@ -113,7 +113,7 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd"];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux podman distrobox ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux docker docker-compose distrobox ];
   };
 
   environment.variables = {
@@ -122,8 +122,8 @@ in {
 
   programs.weylus.enable = true;
 
-  # podman config
-  virtualisation.podman = {
+  # docker config
+  virtualisation.docker= {
   enable = true;
   };
 
