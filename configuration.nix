@@ -67,6 +67,8 @@ in {
   fonts.packages = [ pkgs.font-awesome ];
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.libinput.enable = true;
+  programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
