@@ -77,7 +77,6 @@ in {
   # Configure keymap in X11
   services.xserver = {
     layout = "de";
-    xkbVariant = "";
     xkbOptions = "compose:rstr";
   };
 

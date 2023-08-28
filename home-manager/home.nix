@@ -31,6 +31,7 @@
     libreoffice-fresh
     trilium-desktop
     vscode
+    pulsar
     xournalpp
     tetex
     tectonic
