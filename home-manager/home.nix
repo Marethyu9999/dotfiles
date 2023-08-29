@@ -28,7 +28,7 @@
     yt-dlp
 
     onlyoffice-bin
-    libreoffice-fresh
+    libreoffice-qt
     trilium-desktop
     vscode
     xournalpp
@@ -110,11 +110,8 @@
     enable = true;
     shellAliases = {
       l = "exa -l";
-      aup = "topgrade";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
-      doom = "~/.config/emacs/bin/doom";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
-      lvim = "/home/erik/.local/bin/lvim";
     };
   };
 
