@@ -110,6 +110,7 @@
     enable = true;
     shellAliases = {
       l = "exa -l";
+      doom = "~/.emacs.d/bin/doom";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
     };

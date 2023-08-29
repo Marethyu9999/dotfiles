@@ -17,7 +17,6 @@
     taskwarrior-tui # to have a tui for taskwarrior
     bat-extras.batman # to use bat for reading man pages
     manix  # to search through everything nix related fast
-    qutebrowser-qt6  # to search using vim shortucuts
     vim-full  # for qutebrowser-qt6 to use gvim
   ];
   programs.neovim.defaultEditor = true;
