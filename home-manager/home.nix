@@ -86,6 +86,10 @@
     topgrade
     virt-manager
     win-virtio
+
+    # Databases
+    sqlite
+    sqlitebrowser
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
