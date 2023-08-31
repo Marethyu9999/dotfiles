@@ -1,4 +1,4 @@
-#!/nix/store/rhvbjmcfnkg8i2dxpzr114cp1ws7f667-bash-5.2-p15/bin/bash
+#!/nix/store/7q1b1bsmxi91zci6g8714rcljl620y7f-bash-5.2-p15/bin/bash
 #
 # An example hook script to make use of push options.
 # The example simply echoes all push options that start with 'echoback='

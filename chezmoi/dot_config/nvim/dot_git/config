@@ -4,7 +4,7 @@
 	bare = false
 	logallrefupdates = true
 [remote "origin"]
-	url = https://github.com/nyoom-engineering/nyoom.nvim.git
+	url = https://github.com/AstroNvim/AstroNvim
 	fetch = +refs/heads/main:refs/remotes/origin/main
 [branch "main"]
 	remote = origin

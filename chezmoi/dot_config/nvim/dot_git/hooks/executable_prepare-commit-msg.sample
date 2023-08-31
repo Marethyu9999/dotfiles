@@ -1,4 +1,4 @@
-#!/nix/store/rhvbjmcfnkg8i2dxpzr114cp1ws7f667-bash-5.2-p15/bin/bash
+#!/nix/store/7q1b1bsmxi91zci6g8714rcljl620y7f-bash-5.2-p15/bin/bash
 #
 # An example hook script to prepare the commit log message.
 # Called by "git commit" with the name of the file that has the
@@ -24,11 +24,11 @@ COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 SHA1=$3
 
-/nix/store/5qg40449fx96jl4sq0mbgifdppxq4zap-perl-5.36.0/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+/nix/store/3ccri53gilh3y0sc6czh95s4a2f9k90b-perl-5.36.0/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
 
 # case "$COMMIT_SOURCE,$SHA1" in
 #  ,|template,)
-#    /nix/store/5qg40449fx96jl4sq0mbgifdppxq4zap-perl-5.36.0/bin/perl -i.bak -pe '
+#    /nix/store/3ccri53gilh3y0sc6czh95s4a2f9k90b-perl-5.36.0/bin/perl -i.bak -pe '
 #       print "\n" . `git diff --cached --name-status -r`
 # 	 if /^#/ && $first++ == 0' "$COMMIT_MSG_FILE" ;;
 #  *) ;;
@@ -38,5 +38,5 @@ SHA1=$3
 # git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
 # if test -z "$COMMIT_SOURCE"
 # then
-#   /nix/store/5qg40449fx96jl4sq0mbgifdppxq4zap-perl-5.36.0/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+#   /nix/store/3ccri53gilh3y0sc6czh95s4a2f9k90b-perl-5.36.0/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
 # fi

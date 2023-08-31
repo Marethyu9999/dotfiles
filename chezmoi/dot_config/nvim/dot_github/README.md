@@ -1,121 +1,190 @@
-<div align="center">
-
-# Nyoom.nvim
-
+<div align="center" id="madewithlua">
+    <img src="https://astronvim.com/img/logo/astronvim.svg" width="110", height="100">
 </div>
 
-<div align="center">
+<h1 align="center">AstroNvim</h1>
 
-[![Fennel](https://img.shields.io/badge/Made%20with%20Fennel-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](https://fennel-lang.org)
-[![Stars](https://img.shields.io/github/stars/nyoom-engineering/nyoom.nvim?color=%23b66467&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/nyoom-engineering/nyoom.nvim?color=%238c977d&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/issues)
-[![Forks](https://img.shields.io/github/forks/nyoom-engineering/nyoom.nvim?color=%23d9bc8c&logoColor=%23151515&style=for-the-badge)](https://github.com/nyoom-engineering/nyoom.nvim/network/members)
-[![License](https://img.shields.io/github/license/nyoom-engineering/nyoom.nvim?color=%238da3b9&style=for-the-badge)](https://mit-license.org/)
-![Discord Server](https://img.shields.io/discord/1050624267592663050?color=738adb&label=Discord&Color=white&style=for-the-badge)
+<h4 align="center">
+  <a href="https://astronvim.com/#%EF%B8%8F-installation">Install</a>
+  ·
+  <a href="https://astronvim.com/#%EF%B8%8F-configuration">Configure</a>
+  ·
+  <a href="https://github.com/AstroNvim/astrocommunity">Community Plugins</a>
+  ·
+  <a href="https://astronvim.com">Docs</a>
+  ·
+  <a href="https://discord.gg/AstroNvim">Discord</a>
+</h4>
 
-</div>
+<p align="center">
+    <a href="https://github.com/AstroNvim/AstroNvim/pulse">
+      <img src="https://img.shields.io/github/last-commit/AstroNvim/AstroNvim?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://github.com/AstroNvim/AstroNvim/releases/latest">
+      <img src="https://img.shields.io/github/v/release/AstroNvim/AstroNvim?style=for-the-badge&logo=gitbook&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://github.com/AstroNvim/AstroNvim/stargazers">
+      <img src="https://img.shields.io/github/stars/AstroNvim/AstroNvim?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <img src="https://img.shields.io/endpoint?url=https://waka.mehalter.com/api/compat/shields/v1/mehalter/interval:any/label:AstroNvim&style=for-the-badge&label=wakatime&logo=wakatime&color=a6da95&logoColor=D9E0EE&labelColor=302D41"/>
+    <br>
+    <a href="https://www.twitter.com/AstroNvim">
+      <img src="https://img.shields.io/twitter/follow/AstroNvim?style=for-the-badge&logo=twitter&color=fab387&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://hachyderm.io/@AstroNvim">
+      <img src="https://img.shields.io/mastodon/follow/110685512385862046?domain=https%3A%2F%2Fhachyderm.io&style=for-the-badge&logo=mastodon&color=eebebe&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://www.reddit.com/r/AstroNvim/">
+      <img src="https://img.shields.io/reddit/subreddit-subscribers/AstroNvim?style=for-the-badge&logo=reddit&color=ee99a0&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://discord.gg/astronvim">
+      <img src="https://img.shields.io/discord/939594913560031363?style=for-the-badge&logo=discord&color=cba6f7&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+</p>
 
-> These are your father's parentheses.  
-> Elegant weapons for a more... civilized age.  
-— [xkcd/297](https://xkcd.com/297/)
+<p align="center">
+AstroNvim is an aesthetic and feature-rich neovim config that is extensible and easy to use with a great set of plugins
+</p>
 
-![merged](https://user-images.githubusercontent.com/71196912/206819620-af569a8f-87ad-4b27-b08c-01bb547fa570.png)
+## 🌟 Preview
 
-Nyoom.nvim was an answer to abstracted and complex codebases that take away end-user extensibility, try to be a one-size-fits-all config, and needlessly lazy load *everything*. It solves this problem by providing a set of well integrated modules similar to doom-emacs. Modules contain curated plugins and configurations that work together to provide a unified look and feel across all of Nyoom. The end goal of nyoom.nvim is to be used as a framework config for users to extend and add upon, leading to a more unique editing experience.
+![Preview Image](https://astronvim.com/img/themes/overview.png)
 
-Nyoom can be anything you'd like. Enable all the modules for the vscode-alternative in you, remove some and turn it into the prose editor of your dreams, or disable everything and have a nice set of macros to start your configuration from scratch!
+## ✨ Features
 
-At its core, Nyoom consists of a set of intuitive macros, a nice standard library, a set of modules, and some opinionated default options, and nothing more.
+- Common plugin specifications with [AstroCommunity](https://github.com/AstroNvim/astrocommunity)
+- File explorer with [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- Autocompletion with [Cmp](https://github.com/hrsh7th/nvim-cmp)
+- Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- Statusline, Winbar, and Bufferline with [Heirline](https://github.com/rebelot/heirline.nvim)
+- Terminal with [Toggleterm](https://github.com/akinsho/toggleterm.nvim)
+- Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- Syntax highlighting with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Formatting and Linting with [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
+- Debug Adapter Protocol with [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 
-Designed against the mantras of doom-emacs [doom-emacs](https://github.com/hlissner/doom-emacs):
+## ⚡ Requirements
 
-+ **Gotta go fast**. Startup and run-time performance are priorities.
-+ **Close to metal**. There's less between you and vanilla neovim by design. That's less to grok and less to work around when you tinker.
-+ **Opinionated, but not stubborn**. Nyoom (and Doom) are about reasonable defaults and curated opinions, but use as little or as much of it as you like.
-+ **Your system, your rules**. You know better. At least, Nyoom hopes so! There are no external dependencies (apart from rust), and never will be.
-+ **Nix/Guix is a great idea!** The Neovim ecosystem is temperamental. Things
-break and they break often. Disaster recovery should be a priority! Nyoom's
-package management should be declarative and your private config reproducible,
-and comes with a means to roll back releases and updates (still a WIP).
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads) (_Optional with manual intervention:_ See [Documentation on customizing icons](https://astronvim.com/Recipes/icons)) <sup>[[1]](#1)</sup>
+- [Neovim 0.8+ (_Not_ including nightly)](https://github.com/neovim/neovim/releases/tag/stable)
+- [Tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/blob/master/cli/README.md) (_Note:_ This is only necessary if you want to use `auto_install` feature with Treesitter)
+- A clipboard tool is necessary for the integration with the system clipboard (see [`:help clipboard-tool`](https://neovim.io/doc/user/provider.html#clipboard-tool) for supported solutions)
+- Terminal with true color support (for the default theme, otherwise it is dependent on the theme you are using) <sup>[[2]](#2)</sup>
+- Optional Requirements:
+  - [ripgrep](https://github.com/BurntSushi/ripgrep) - live grep telescope search (`<leader>fw`)
+  - [lazygit](https://github.com/jesseduffield/lazygit) - git ui toggle terminal (`<leader>tl` or `<leader>gg`)
+  - [go DiskUsage()](https://github.com/dundee/gdu) - disk usage toggle terminal (`<leader>tu`)
+  - [bottom](https://github.com/ClementTsang/bottom) - process viewer toggle terminal (`<leader>tt`)
+  - [Python](https://www.python.org/) - python repl toggle terminal (`<leader>tp`)
+  - [Node](https://nodejs.org/en/) - node repl toggle terminal (`<leader>tn`)
 
-It also aligns with many of Doom's features:
+> <sup id="1">[1]</sup> All downloadable Nerd Fonts contain icons which are used by AstroNvim. Install the Nerd Font of your choice to your system and in your terminal emulator settings, set its font face to that Nerd Font. If you are using AstroNvim on a remote system via SSH, you do not need to install the font on the remote system.
 
-+ Minimalistic good looks inspired by modern editors.
-+ A modular organizational structure for separating concerns in your config.
-+ A standard library designed to simplify your fennel bike shedding.
-+ A declarative package management and module system (inspired by `use-package`, powered by [Packer.nvim](https://github.com/wbthomason/packer.nvim)). Install packages from anywhere, and pin them to any commit.
-+ A Space(vim)-esque keybinding scheme, centered around leader and localleader prefix keys (SPC and SPCm).
-+ Project search (and replace) utilities, powered by ripgrep, and telescope.
-+ Per-file indentation style detection and [editorconfig] integration. Let
-someone else argue about tabs vs *spaces*
-+ Support for modern tooling and navigation through language-servers, null-ls, and tree-sitter.
+> <sup id="2">[2]</sup> Note when using default theme: For MacOS, the default terminal does not have true color support. You will need to use [iTerm2](https://iterm2.com/), [Kitty](https://sw.kovidgoyal.net/kitty/), [WezTerm](https://wezfurlong.org/wezterm/), or another [terminal emulator](https://gist.github.com/XVilka/8346728#terminal-emulators) that has true color support.
 
-For more info, checkout our (under construction) [FAQ](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/faq.md)
+## 🛠️ Installation
 
-## Prerequisites
+### Linux/Mac OS (Unix)
 
-+ Neovim v0.8.1+
-+ Git
-+ Ripgrep 11.0+
+#### Make a backup of your current nvim and shared folder
 
-Nyoom works best with a modern terminal with [Truecolor](https://github.com/termstandard/colors) support. Optionally, you can install [Neovide](https://github.com/neovide/neovide) if you'd like a gui.
-
-Nyoom is comprised of optional [modules](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/modules.md), some of which may have additional dependencies. Run `:checkhealth` to check for what you may have missed.
-
-## Install
-
-```bash
-git clone --depth 1 https://github.com/nyoom-engineering/nyoom.nvim.git ~/.config/nvim 
-cd ~/.config/nvim/
-bin/nyoom install 
-bin/nyoom sync
+```shell
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 
-Then read [getting started](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/getting_started.md) to be walked through
-installing, configuring and maintaining Nyoom Nvim.
+#### Clone the repository
 
-It's a good idea to add `~/.config/nvim/bin` to your `PATH`! Other `bin/nyoom`
-commands you should know about:
+```shell
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+nvim
+```
 
-+ `nyoom sync` to synchronize your private config with Nyoom by installing missing
-packages, removing orphaned packages, and regenerating caches. Run this
-whenever you modify your `packages.fnl` and `modules.fnl`
-+ `nyoom upgrade` to update Nyoom to the latest release
-+ `nyoom lock` to dump a snapshot of your currently installed packages to a lockfile file.
+### Windows (Powershell)
 
-## Getting help
+#### Make a backup of your current nvim and nvim-data folder
 
-Neovim is no journey of a mere thousand miles. You *will* run into problems and
-mysterious errors. When you do, here are some places you can look for help:
+```pwsh
+Rename-Item -Path $env:LOCALAPPDATA\nvim -NewName $env:LOCALAPPDATA\nvim.bak
+Rename-Item -Path $env:LOCALAPPDATA\nvim-data -NewName $env:LOCALAPPDATA\nvim-data.bak
+```
 
-+ [Our Documentation](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/) covers many use cases.
-+ The builtin `:help` is your best friend
-+ To search available keybinds: `<SPC>fk`
-+ Run `:check health` to detect common issues with your development
-environment.
-+ Search [Nyoom's issue tracker](https://github.com/nyoom-engineering/nyoom.nvim/issues) in case your issue was already
-reported.
-+ Hop on [our Discord server](https://discord.gg/M528tDKXRG) ; it's active and friendly!
+#### Clone the repository
 
-If you have an issue with a plugin in Nyoom.nvim, first you should report it here. Please don't bother package maintainers with issues that are caused by my configs, and vice versa.
+```pwsh
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim $env:LOCALAPPDATA\nvim
+nvim
+```
 
-## Roadmap
+## 📦 Basic Setup
 
-(under construction)
+#### Install LSP
 
-## Contribute
+Enter `:LspInstall` followed by the name of the server you want to install<br>
+Example: `:LspInstall pyright`
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+#### Install language parser
 
-Checkout the [Contributor Guide](https://github.com/nyoom-engineering/nyoom.nvim/blob/master/docs/contributing.md)
+Enter `:TSInstall` followed by the name of the language you want to install<br>
+Example: `:TSInstall python`
 
-+ I love pull requests and bug reports!
-+ Don't hesitate to [tell me my lisp-fu
-sucks](https://github.com/nyoom-engineering/nyoom.nvim/issues/new), but please tell me
-why.
-+ Don't see support for your language, or think it should be improved? Feel free to open an issue or PR with your changes.
+#### Install Debugger
 
-## Credits
+Enter `:DapInstall` followed by the name of the debugger you want to install<br>
+Example: `:DapInstall python`
 
-+ [David Guevara](https://github.com/datwaft) For getting me into fennel, and for some of his beautiful macros. Without him Nyoom wouldn't exist!
-+ [Oliver Caldwell](https://github.com/Olical/) For his excellent work on Aniseed, Conjure, and making fennel feel like a first class language in neovim
+#### Manage plugins
+
+Run `:Lazy check` to check for plugin updates
+
+Run `:Lazy update` to apply any pending plugin updates
+
+Run `:Lazy clean` to remove any disabled or unused plugins
+
+Run `:Lazy sync` to update and clean plugins
+
+#### Update AstroNvim
+
+Run `:AstroUpdate` to get the latest updates from the repository<br>
+
+#### Update AstroNvim Packages
+
+Run `:AstroUpdatePackages` (`<leader>pa`) to update both Neovim plugins and Mason packages
+
+## 🗒️ Links
+
+[AstroNvim Documentation](https://astronvim.com)
+[Core AstroNvim LUA API Documentation](https://api.astronvim.com)
+
+- [Basic Usage](https://astronvim.com/Basic%20Usage/walkthrough) is given for basic usage
+- [Default Mappings](https://astronvim.com/Basic%20Usage/mappings) more about the default key bindings
+- [Default Plugin Configuration](https://astronvim.com/configuration/plugin_defaults) more about the provided plugin defaults
+- [Advanced Configuration](https://astronvim.com/configuration/config_options) more about advanced configuration
+
+### 📹 Videos
+
+There have been some great review videos released by members of the community! Here are a few:
+
+- [Neovim With AstroNvim | Your New Advanced Development Editor](https://www.youtube.com/watch?v=GEHPiZ10gOk) (Version: 3, Content By: [@Cretezy](https://github.com/Cretezy))
+- [Why I'm quitting VIM by Carlos Mafla](https://www.youtube.com/watch?v=71GDopdc9rw) (Version: 2, Content By: [@gigo6000](https://github.com/gigo6000))
+- [Astro Vim - All in one Nvim config!! by John McBride](https://www.youtube.com/watch?v=JQLZ7NJRTEo) (Version: 1, Content By: [@jpmcb](https://github.com/jpmcb))
+
+## 🚀 Contributing
+
+If you plan to contribute, please check the [contribution guidelines](CONTRIBUTING.md) first.
+
+## ⭐ Credits
+
+Sincere appreciation to the following repositories, plugin authors and the entire neovim community out there that made the development of AstroNvim possible.
+
+- [Plugins](https://astronvim.com/acknowledgements#plugins-used-in-astronvim)
+- [NvChad](https://github.com/NvChad/NvChad)
+- [LunarVim](https://github.com/LunarVim)
+- [CosmicVim](https://github.com/CosmicNvim/CosmicNvim)
+
+<div align="center" id="madewithlua">
+
+[![Lua](https://img.shields.io/badge/Made%20with%20Lua-blue.svg?style=for-the-badge&logo=lua)](https://lua.org)
+
+</div>
