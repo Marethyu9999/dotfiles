@@ -113,7 +113,7 @@ in {
     description = "erik";
     extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd" "docker"];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux docker docker-compose distrobox ];
+    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux docker docker-compose distrobox ntfy-sh];
   };
 
   environment.variables = {
