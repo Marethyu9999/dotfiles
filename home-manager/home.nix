@@ -20,7 +20,6 @@
     seafile-client
     owncloud-client  # for use with my nextcloud server (obviosly)
     syncthing
-    syncthingtray  # for syncing nextcloud to my phone (as the phone app doesnt work with KeepassDX)
     gitoxide
     gitkraken
     nixfmt
@@ -90,6 +89,8 @@
     # Databases
     sqlite
     sqlitebrowser
+
+    syncthingtray
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
@@ -118,6 +119,11 @@
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
     };
+  };
+
+  # syncthing settings
+  services.syncthing = {
+    enable = true;
   };
 
   dconf.settings = {
