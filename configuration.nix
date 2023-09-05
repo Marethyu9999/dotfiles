@@ -111,26 +111,40 @@ in {
   users.users.erik = {
     isNormalUser = true;
     description = "erik";
-    extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd" "docker" ];
     shell = pkgs.fish;
-    packages = with pkgs; [ firefox kate ansible openttd cloudflared emacs weylus tmux docker docker-compose distrobox ntfy-sh];
+    packages = with pkgs; [
+      firefox
+      kate
+      ansible
+      openttd
+      cloudflared
+      emacs
+      weylus
+      tmux
+      docker
+      docker-compose
+      distrobox
+      ntfy-sh
+    ];
   };
 
-  environment.variables = {
-    LIBVIRT_DEFAULT_URI = "qemu:///system";
+  services.emacs = {
+    enable = true;
+    install = true;
   };
+
+  environment.variables = { LIBVIRT_DEFAULT_URI = "qemu:///system"; };
 
   programs.weylus.enable = true;
 
   # docker config
-  virtualisation.docker= {
-  enable = true;
-  };
+  virtualisation.docker = { enable = true; };
 
   # tmux config
   programs.tmux = {
-  enable = true;
-  clock24 = true;
+    enable = true;
+    clock24 = true;
   };
 
   # Allow unfree packages
@@ -191,7 +205,7 @@ in {
 
   # Enable libvirtd
   virtualisation.libvirtd.enable = true;
-  programs.dconf.enable = true;  # as virt-manager apparently needs it
+  programs.dconf.enable = true; # as virt-manager apparently needs it
   virtualisation.libvirtd.onBoot = "start";
   virtualisation.spiceUSBRedirection.enable = true;
 

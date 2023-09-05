@@ -18,7 +18,7 @@
 
     chezmoi
     seafile-client
-    owncloud-client  # for use with my nextcloud server (obviosly)
+    owncloud-client # for use with my nextcloud server (obviosly)
     syncthing
     gitoxide
     gitkraken
@@ -36,7 +36,7 @@
     lyx
     texmaker
     texlab
-    pandoc  # to change the format of almost anything
+    pandoc # to change the format of almost anything
 
     # Security stuff
     keepassxc
@@ -118,20 +118,18 @@
       doom = "~/.emacs.d/bin/doom";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
+      e = "emacsclient -c";
     };
   };
 
   # syncthing settings
-  services.syncthing = {
-    enable = true;
-  };
+  services.syncthing = { enable = true; };
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-    autoconnect = ["qemu:///system"];
-    uris = ["qemu:///system"];
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
     };
   };
-
   programs.home-manager.enable = true;
 }
