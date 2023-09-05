@@ -91,6 +91,7 @@
     sqlitebrowser
 
     syncthingtray
+    graphviz
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
