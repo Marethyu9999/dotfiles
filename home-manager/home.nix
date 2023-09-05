@@ -121,6 +121,7 @@
       chezmoi-git = "nvim ~/.local/share/chezmoi";
       e = "emacsclient -c";
     };
+    shellInit = "tmux";
   };
 
   # syncthing settings
