@@ -125,8 +125,8 @@
       ls = "lsd";
       doom = "~/.emacs.d/bin/doom";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
-      chezmoi-git = "nvim ~/.local/share/chezmoi";
-      e = "emacsclient -c";
+      chezmoi-git = "e ~/.local/share/chezmoi";
+      e = "emacsclient -c -a 'emacs'";
     };
     #shellInit = "tmux";
   };
