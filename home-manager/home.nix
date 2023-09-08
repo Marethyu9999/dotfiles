@@ -92,6 +92,12 @@
 
     syncthingtray
     graphviz
+    maim
+    wl-clipboard
+    shfmt
+    shellcheck
+    groff
+    ghostscript
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
