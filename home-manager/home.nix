@@ -121,13 +121,14 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      l = "exa -l";
+      l = "lsd -l";
+      ls = "lsd";
       doom = "~/.emacs.d/bin/doom";
       nup = "sudo nixos-rebuild switch --upgrade --flake .# --impure";
       chezmoi-git = "nvim ~/.local/share/chezmoi";
       e = "emacsclient -c";
     };
-    shellInit = "tmux";
+    #shellInit = "tmux";
   };
 
   # syncthing settings
