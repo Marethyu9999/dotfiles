@@ -31,5 +31,5 @@
     font = { normal.family = "FiraCode Nerd Font"; };
   };
 
-  home.sessionVariables = { EDITOR = "~/.local/bin/lvim"; };
+  home.sessionVariables = { EDITOR = "emacsclient -c"; };
 }
