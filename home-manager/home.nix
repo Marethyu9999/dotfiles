@@ -98,6 +98,8 @@
     shellcheck
     groff
     ghostscript
+    steamPackages.steamcmd
+    steam-tui
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
