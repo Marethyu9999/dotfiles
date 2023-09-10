@@ -192,6 +192,59 @@ in {
     xdg-desktop-portal-hyprland
     pueue
     wofi
+    # for the dotfiles
+    pywal
+    poetry
+    python311Packages.build
+    python311Packages.pillow
+    bc
+    blueberry
+    bluez
+    boost
+    coreutils
+    dunst
+    findutils
+    fuzzel
+    fzf
+    gawk
+    gnome.gnome-control-center
+    ibus
+    imagemagick
+    libqalculate
+    light
+    networkmanager
+    networkmanagerapplet
+    nlohmann_json
+    pavucontrol
+    libsForQt5.plasma-browser-integration
+    playerctl
+    procps
+    socat
+    sox
+    starship
+    swaybg
+    swayidle
+    jetbrains-mono
+    upower
+    util-linux
+    xorg.xrandr
+    wireplumber
+    wl-clipboard
+    yad
+    cava
+    eww-wayland
+    gojq
+    gtklock
+    gtklock-playerctl-module
+    gtklock-powerbar-module
+    gtklock-userinfo-module
+    python311Packages.material-color-utilities
+    swww
+    material-symbols
+    waybar
+    wlogout
+    # the following are currently missing: desktop-entry-lib; boost-libs; geticons
+
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
