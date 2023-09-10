@@ -97,8 +97,7 @@
     shellcheck
     groff
     ghostscript
-    steamPackages.steamcmd
-    steam-tui
+    openai-whisper
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
