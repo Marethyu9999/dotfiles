@@ -74,6 +74,9 @@ in {
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+  # Enable hyprland WM
+  programs.hyprland.enable = true;
+
   # Configure keymap in X11
   services.xserver = {
     layout = "de";
@@ -185,6 +188,7 @@ in {
     busybox
     spice
     spice-gtk
+    hyprland
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium
