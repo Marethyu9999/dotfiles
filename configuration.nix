@@ -189,6 +189,9 @@ in {
     spice
     spice-gtk
     hyprland
+    xdg-desktop-portal-hyprland
+    pueue
+    wofi
     #pcsc-cyberjack
     #pcsclite
     #texlive.combined.scheme-medium

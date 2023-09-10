@@ -20,7 +20,6 @@
     seafile-client
     owncloud-client # for use with my nextcloud server (obviosly)
     syncthing
-    gitoxide
     gitkraken
     nixfmt
 
