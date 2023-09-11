@@ -19,6 +19,12 @@
     manix # to search through everything nix related fast
     vim-full # for qutebrowser-qt6 to use gvim
     nb # for quickly writing notes in my terminal
+    fzf # for making everything a tad fuzzy
+
+    fishPlugins.fzf # to have fuzzy everything in fish
+    fishPlugins.forgit # to have fuzzy interactive git commands in fish
+    fishPlugins.github-copilot-cli-fish # to use github copilot in fish
+    fishPlugins.sponge # to remove those pesky errors in my commands from history
   ];
   programs.neovim.defaultEditor = true;
   programs.alacritty.settings = {
