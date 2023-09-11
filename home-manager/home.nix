@@ -61,6 +61,11 @@
 
     gzdoom # old doom games
     starsector # funny space game
+    oh-my-git
+    mindustry-wayland
+    pacvim
+    minetest
+    factorio
 
     rnix-lsp # lsp-server written in rust
     gcc_multi
