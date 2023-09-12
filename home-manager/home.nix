@@ -71,6 +71,7 @@
     gcc_multi
     cmake
     libtool
+    jre_minimal
 
     gnumake
     python39
