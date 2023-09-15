@@ -20,6 +20,7 @@
     vim-full # for qutebrowser-qt6 to use gvim
     nb # for quickly writing notes in my terminal
     fzf # for making everything a tad fuzzy
+    d2 # for easily creating diagrams using text
 
     fishPlugins.fzf # to have fuzzy everything in fish
     fishPlugins.forgit # to have fuzzy interactive git commands in fish
