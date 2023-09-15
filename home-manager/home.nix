@@ -29,7 +29,7 @@
     libreoffice-qt
     trilium-desktop
     vscode
-    xournalpp
+    rnote
     tetex
     tectonic
     lyx
