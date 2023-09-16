@@ -30,6 +30,7 @@
     trilium-desktop
     vscode
     rnote
+    xournalpp
     drawio
     tetex
     tectonic
