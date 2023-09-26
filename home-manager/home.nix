@@ -15,6 +15,7 @@
     thunderbird-bin
     libsForQt5.korganizer
     libsForQt5.kmail
+    partition-manager
 
     chezmoi
     seafile-client
