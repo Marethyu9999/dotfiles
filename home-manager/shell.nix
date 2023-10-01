@@ -9,6 +9,7 @@
     fd # alternative to find using rust
     thefuck # autocorrection of previous command using "fuck" as init
     alacritty # better terminal
+    kitty # even better, better terminal
     btop # top but better and faster
     bat # better cat command
     lf # to use for file management
