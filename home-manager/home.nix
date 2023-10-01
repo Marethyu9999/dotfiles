@@ -82,7 +82,6 @@
     rustup # complete rust toolkit
     lazygit
     neovim
-    nerdfonts
 
     git-crypt # for transparent encryption
     ranger # command line file manager
