@@ -19,6 +19,7 @@
     bat-extras.batman # to use bat for reading man pages
     manix # to search through everything nix related fast
     vim-full # for qutebrowser-qt6 to use gvim
+    helix # vim but newer than neovim
     nb # for quickly writing notes in my terminal
     fzf # for making everything a tad fuzzy
     d2 # for easily creating diagrams using text
