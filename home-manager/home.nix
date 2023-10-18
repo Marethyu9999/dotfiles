@@ -34,8 +34,8 @@
     rnote
     xournalpp
     drawio
-    tetex
     tectonic
+    texlive.combined.scheme-small
     lyx
     texmaker
     texlab
