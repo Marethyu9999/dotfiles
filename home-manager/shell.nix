@@ -23,6 +23,7 @@
     nb # for quickly writing notes in my terminal
     fzf # for making everything a tad fuzzy
     d2 # for easily creating diagrams using text
+    libqalculate # best calculator ever!!
 
     fishPlugins.fzf # to have fuzzy everything in fish
     fishPlugins.forgit # to have fuzzy interactive git commands in fish
