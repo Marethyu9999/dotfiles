@@ -70,12 +70,14 @@
     pacvim
     minetest
     factorio
+    prismlauncher # best minecraft launcher, fork of MultiMC
 
     rnix-lsp # lsp-server written in rust
     gcc_multi
     cmake
     libtool
     jre_minimal
+    jre8
 
     gnumake
     python39
