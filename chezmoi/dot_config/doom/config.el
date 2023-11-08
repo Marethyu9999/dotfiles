@@ -81,3 +81,22 @@
 
 (setq rmh-elfeed-org-files '("/home/erik/org/elfeed-org/elfeed.org"))
 (setq browse-url-browser-function 'eww-browse-url)
+
+(setq org-crypt-key "erik@grobecker.me")
+(setq auto-save-default nil) ;; for better org-crypt compability
+(org-crypt-use-before-save-magic)
+(setq org-tags-exclude-from-inheritance '("crypt"))
+
+(use-package! websocket
+  :after org-roam)
+(use-package! org-roam-ui
+  :after org-roam ;; or :after org
+  ;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+  ;;         a hookable mode anymore, you're advised to pick something yourself
+  ;;         if you don't care about startup time, use
+  ;;  :hook (after-init . org-roam-ui-mode)
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
