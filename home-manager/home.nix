@@ -34,6 +34,8 @@
     rnote
     xournalpp
     drawio
+    krita # wanky doodles are my passion
+    gimp # photoshop alternative
     tectonic
     texlive.combined.scheme-small
     lyx
