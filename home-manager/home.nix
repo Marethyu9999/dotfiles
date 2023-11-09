@@ -78,7 +78,6 @@
     gcc_multi
     cmake
     libtool
-    jre_minimal
     jre8
 
     gnumake
