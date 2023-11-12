@@ -153,5 +153,6 @@
       uris = [ "qemu:///system" ];
     };
   };
+
   programs.home-manager.enable = true;
 }

@@ -225,6 +225,7 @@ in {
   #};
 
   programs.kdeconnect.enable = true;
+  programs.steam.enable = true;
   services.avahi.enable = true;
 
   # List services that you want to enable:
