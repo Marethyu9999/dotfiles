@@ -71,7 +71,7 @@
     mindustry-wayland
     pacvim
     minetest
-    factorio
+    #factorio
     prismlauncher # best minecraft launcher, fork of MultiMC
 
     rnix-lsp # lsp-server written in rust
