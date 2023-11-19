@@ -115,7 +115,7 @@
     openai-whisper
   ];
 
-  imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ];
+  imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ./alacritty.nix ];
 
   programs.micro.enable = true;
 
