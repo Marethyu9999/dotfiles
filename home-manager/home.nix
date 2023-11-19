@@ -85,8 +85,6 @@
     jre8
 
     gnumake
-    python39
-    python39Packages.pip
     rustup # complete rust toolkit
     lazygit
     neovim
