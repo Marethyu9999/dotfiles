@@ -24,6 +24,7 @@
     fzf # for making everything a tad fuzzy
     d2 # for easily creating diagrams using text
     libqalculate # best calculator ever!!
+    ffmpeg # to merge, or more likely edit media in any possible way
 
     fishPlugins.fzf # to have fuzzy everything in fish
     fishPlugins.forgit # to have fuzzy interactive git commands in fish
