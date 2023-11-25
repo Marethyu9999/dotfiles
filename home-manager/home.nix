@@ -55,11 +55,8 @@
     signing-party
 
     vlc
-    mpv
-    mpvScripts.uosc
-    mpvScripts.thumbnail
-    mpvScripts.webtorrent-mpv-hook
     calibre
+    mpv
 
     # SSH stuff
     termius
