@@ -122,7 +122,7 @@ in {
       ansible
       openttd
       cloudflared
-      emacs
+      emacs29-nox
       weylus
       tmux
       docker
