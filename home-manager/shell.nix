@@ -25,6 +25,7 @@
     d2 # for easily creating diagrams using text
     libqalculate # best calculator ever!!
     ffmpeg # to merge, or more likely edit media in any possible way
+    inshellisense # intellisense for the shell *wow*
 
     fishPlugins.fzf # to have fuzzy everything in fish
     fishPlugins.forgit # to have fuzzy interactive git commands in fish
