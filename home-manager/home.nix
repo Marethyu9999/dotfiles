@@ -110,6 +110,10 @@
     groff
     ghostscript
     openai-whisper
+
+    wine-wayland
+    winetricks
+    bottles
   ];
 
   imports = [ ./shell.nix ./fonts.nix ./mdbook.nix ./alacritty.nix ./hyprland.nix ];
